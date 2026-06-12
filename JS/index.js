@@ -1,8 +1,3 @@
-// ========================================
-// PROYECTO FINAL: INVENTARIO DE CREPERÍA
-// ========================================
-
-// Base de datos inicial (arreglo de objetos)
 const productos = [
     {
         nombre: "Crepa de Nutella",
@@ -31,7 +26,33 @@ const productos = [
     }
 ];
 
-console.log("===== INVENTARIO DE LA CREPERÍA =====");
+// Nuevo producto agregado al inventario
+const nuevoProducto = {
+    nombre: "Frappé",
+    precio: 65,
+    stock: 40
+};
+
+productos.push(nuevoProducto);
+
+// MENÚ DE LA CREPERÍA
+const menu = [
+    "Crepa de Nutella",
+    "Crepa de Fresas",
+    "Crepa de Cajeta",
+    "Crepa Hawaiana",
+    "Crepa de Queso Crema",
+    "Frappé"
+];
+
+// Mostrar menú
+console.log("===== MENÚ DE LA CREPERÍA =====");
+
+menu.forEach((crepa, index) => {
+    console.log(`${index + 1}. ${crepa}`);
+});
+
+console.log("\n===== INVENTARIO DE LA CREPERÍA =====");
 
 // 1. Mostrar productos disponibles
 const productosDisponibles = productos.filter(producto => producto.stock > 0);
